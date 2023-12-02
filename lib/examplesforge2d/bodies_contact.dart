@@ -41,9 +41,9 @@ class BodiesContact extends Forge2DGame with TapDetector {
   @override
   void onTapDown(TapDownInfo info) {
     if (Random.secure().nextBool()) {
-      world.add(BoxBody(screenToWorld(info.eventPosition.game)));
+      world.add(BoxBody(screenToWorld(info.eventPosition.global)));
     } else {
-      world.add(BallBody(screenToWorld(info.eventPosition.game)));
+      world.add(BallBody(screenToWorld(info.eventPosition.global)));
     }
 
     super.onTapDown(info);

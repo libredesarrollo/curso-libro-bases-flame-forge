@@ -18,7 +18,7 @@ class BodiesSpritesAnimate extends Forge2DGame with TapDetector {
 
   @override
   void onTapDown(TapDownInfo info) {
-    final position = screenToWorld(info.eventPosition.game);
+    final position = screenToWorld(info.eventPosition.global);
     world.add(PlayerBody(position, PlayerComponent(position: position)));
 
     super.onTapDown(info);
